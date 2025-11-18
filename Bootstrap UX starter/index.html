@@ -26,9 +26,14 @@
     }
     footer{
         background: linear-gradient(90deg, #5abe9d 0%, #f8cd4d 29%, #f4a22a 46%, #d03a8f 66%, #6862af 83%);
+        padding: 1rem 0;
+        margin-top: auto;
     }
     body {
         background-color: #E7E7D8;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
     section.hero {
       background-color: #E7E7D8;
@@ -47,9 +52,16 @@
       background-color: #37326a;
       border-color: #272443;
     }
+    .btn:focus {
+      background-color: #3a3844;
+    }
     section>.container h2 {
       font-weight: bold;
       color: #000000;
+    }
+    .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+      color: #fff;
+      background: none;
     }
     </style>
 
@@ -84,7 +96,6 @@
       <!-- Hero section  -->
       <section class="hero">
         <div class="container">
-          <img src="tempimg.jpg" class="img-fluid">
         </div>
       </section>
 
@@ -131,21 +142,21 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
-        <div class="space-between">
-          <ul class="list-inline">
-            <li><a href="https://x.com/McrDig"><i class="mdi mdi-twitter" target="_blank"></i>X - Manchester Digital</a></li><br />
-            <li><a href="https://www.facebook.com/ManchesterDigital/" target="_blank"><i class="mdi mdi-facebook"></i>Facebook - Manchester Digital</a></li><br />
-            <li><a href="https://www.instagram.com/manchesterdigital/" target="_blank"><i class="mdi mdi-instagram"></i>Instagram - Manchester Digital</a></li><br />
-            <li><a href="https://www.linkedin.com/company/manchester-digital/" target="_blank"><i class="mdi mdi-linkedin"></i>LinkedIn - Manchester Digital</a></li><br />
-            <li><a href="https://www.manchesterdigital.com/slack-channel" target="_blank"><i class="mdi mdi-slack"></i>Slack - Manchester Digital</a></li><br />
-          </ul>
-
-          <ul class="list-inline">
-            <li><img src="mdlogo.png" class="img-fluid" width="298" height="73"></li>
-            <li><img src="tlvl.png" class="img-fluid" width="224" height="73"></li>
-          </ul>
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-end">
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="mdi mdi-facebook"></i></a>
+              <a href="#" aria-label="Twitter"><i class="mdi mdi-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="mdi mdi-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="mdi mdi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <img src="mdlogo.png" class="img-fluid" width="120" height="40">
+            <img src="tlvl.png" class="img-fluid" width="110" height="40">
+          </div>
         </div>
       </div>
     </footer>
