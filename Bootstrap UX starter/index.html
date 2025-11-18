@@ -36,7 +36,12 @@
         flex-direction: column;
     }
     section.hero {
+      background-image: url(e.png);
+      background-repeat: no-repeat;
+      background-position: center;
       background-color: #E7E7D8;
+      background-size:cover;
+      display: flex;
     }
     .card-group .card .card-body h3 {
       color: #000000;
@@ -68,6 +73,9 @@
     }
     i:hover {
       color: #fff;
+    }
+    .navbar-inverse .navbar-nav>li>a:hover {
+      color: #000;
     }
     </style>
 
@@ -108,7 +116,8 @@
       <!-- Boxes in 4 columns section -->
       <section>
         <div class="container">
-          <h2>Section</h2>
+          <h2>Welcome</h2>
+          <p>Welcome to T-Connect</p><br />
           <div class="card-group card-group-3-col">
 
             <div class="card">
@@ -129,7 +138,7 @@
 
             <div class="card">
               <div class="card-body">
-                <h3>Apply to Host a T-Level Placement</h3>
+                <h3>Apply to Host a Placement</h3>
                 <p>Are you an employer who's looking to start hosting work placements for T-Level students? Click here to get started.</p>
                 <button class="btn btn-primary">Enquire Now</button>
               </div>
@@ -160,7 +169,8 @@
             </div>
           </div>
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <img src="mdlogo.png" class="img-fluid" width="130" height="40">
+           <!-- <a href="https://www.manchesterdigital.com/" target="_blank"> -->
+              <img src="mdlogo.png" class="img-fluid" width="130" height="40"/>
             <img src="tlvl.png" class="img-fluid" width="110" height="40">
           </div>
         </div>
