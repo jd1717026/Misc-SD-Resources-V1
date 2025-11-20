@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -80,6 +81,60 @@
     .navbar-inverse .navbar-nav>li>a:hover {
       color: #fff;
     }
+    .form-container {
+        text-align: center;
+    }
+    a {
+        color: #000000;
+    }
+    .accordion {
+        background-color: #dfd7d7;
+        text-align: left;
+        padding-top: 0.2%;
+        padding-bottom: 0.2%;
+    }
+    .accordion-button {
+        color: #000;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-color: #d03a8f;
+        padding: 8px 22px;
+        margin: 0 0 1px 0;
+        position: relative;
+        transition: ease .5s;
+    }
+    .accordion-button::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f078';
+        font-weight: bold;
+    }
+    input:checked + .accordion-button::after {
+        content: '\f077';
+    }
+    .accordion-button::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f078';
+        font-weight: bold;
+        font-size: 22px;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+    }
+    input + .accordion-button + .accordion {
+        display: none;
+    }
+
+    input:checked + .accordion-button + .accordion {
+        display: block;
+    }
+    input {
+        display: none;
+    }
+    .accordion-item {
+        background-color: #ffffff;
+        border: #000;
+    }
     </style>
 
   <body>
@@ -115,6 +170,53 @@
         <div class="container">
         </div>
       </section>
+
+      <div class="form-container">
+
+        <div class="container mt-5">
+            <div class="accordion" id="accordionExample">
+                <!-- First Item -->
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    How can I contact employers?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    Ans
+                    </div>
+                </div>
+                </div>
+                <!-- Second Item -->
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What should I do if I'm going to be late?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    This is the content of Section 2
+                    </div>
+                </div>
+                </div>
+                <!-- Third Item -->
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Will I recieve feedback?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                    This is the content of Section 3
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <footer class="footer">
       <div class="container">
