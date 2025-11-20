@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -86,6 +87,54 @@
     a {
         color: #000000;
     }
+    .accordion {
+        background-color: #dfd7d7;
+        text-align: left;
+        padding-top: 0.2%;
+        padding-bottom: 0.2%;
+    }
+    .accordion-button {
+        color: #000;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-color: #d03a8f;
+        padding: 8px 22px;
+        margin: 0 0 1px 0;
+        position: relative;
+        transition: ease .5s;
+    }
+    .accordion-button::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f078';
+        font-weight: bold;
+    }
+    input:checked + .accordion-button::after {
+        content: '\f077';
+    }
+    .accordion-button::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f078';
+        font-weight: bold;
+        font-size: 22px;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+    }
+    input + .accordion-button + .accordion {
+        display: none;
+    }
+
+    input:checked + .accordion-button + .accordion {
+        display: block;
+    }
+    input {
+        display: none;
+    }
+    .accordion-item {
+        background-color: #ffffff;
+        border: #000;
+    }
     </style>
 
   <body>
@@ -121,6 +170,7 @@
         <div class="container">
         </div>
       </section>
+      <br />
 
       <div class="form-container">
 
