@@ -120,39 +120,8 @@
       </section>
 
       <div class="form-container">
-            <form action="#" name = "enquire" onsubmit = "return(validate());">
-
-                <h4 class="email">E-mail Address:</h4>
-                <input class="textInput" type="email" name="email" required><br />
-
-                <input type = "submit" value = "Submit" />
-
-            </form>
-        </div>
-        
-        <script>
-
-            function validate() {
-
-                if( document.enquire.email.value == "" )
-                {
-                    alert("Please provide a valid email.");
-                    document.enquire.email.focus() ;
-                    return false;
-                }
-
-                var emailID = document.enquire.email.value;
-                atpos = emailID.indexOf("@");
-                dotpos = emailID.lastIndexOf(".");
-
-                if (atpos < 1 || (dotpos - atpos < 2)) {
-                    alert("Please provide a valid email in the format: name@example.com")
-                    document.enquire.email.focus() ;
-                    return false;
-                    }
-                }
-
-      </script>
+        <h2>Interested in hosting a placement? Click here to get started.</h2><br />
+      </div>
 
     <footer class="footer">
       <div class="container">
