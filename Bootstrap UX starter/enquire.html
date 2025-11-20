@@ -80,6 +80,9 @@
     .navbar-inverse .navbar-nav>li>a:hover {
       color: #fff;
     }
+    .form-container {
+        text-align: center;
+    }
     </style>
 
   <body>
@@ -116,12 +119,16 @@
         </div>
       </section>
 
-        <form action="#" name = "enquire" onsubmit = "return(validate());">
+      <div class="form-container">
+            <form action="#" name = "enquire" onsubmit = "return(validate());">
 
-            <h4 class="email">*E-mail Address:</h4>
-            <input class="textInput" type="email" name="email" required>
+                <h4 class="email">E-mail Address:</h4>
+                <input class="textInput" type="email" name="email" required><br />
 
-            <input type = "submit" value = "Submit" />
+                <input type = "submit" value = "Submit" />
+
+            </form>
+        </div>
         
         <script>
 
