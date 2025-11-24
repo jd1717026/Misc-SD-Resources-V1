@@ -110,7 +110,7 @@
               <li class="nav-link"><a href="index.html">HOME PAGE</a></li>
               <li class="nav-link"><a href="saved.html">ABOUT</a></li>
               <li class="nav-link active" aria-current="page"><a href="faq.html">FAQ</a></li>
-              <li class="nav-link"><a href="enquire.html">ENQUIRE</a></li>
+              <li class="nav-link"><a href="apply.html">apply</a></li>
               <li class="nav-link"><a href="application.html">APPLY</a></li>
           </ul>
         </div>
@@ -126,7 +126,7 @@
       </section>
 
       <div class="form-container">
-        <form action="#" name = "enquire" onsubmit = "return(validate());">
+        <form action="#" name = "apply" onsubmit = "return(validate());">
 
             <h5>This form is intended for students who are interested in applying for a T-Level Placement with Manchester Digital.</h5>
             <h5>Please ensure all details are filled out correctly, as we will use these details to contact you.</h5><br />
@@ -136,6 +136,9 @@
 
             <h4 class="email">E-mail Address:</h4>
             <input class="textInput" type="email" name="email" required>
+
+            <h4 class="telNo">Mobile Phone Number:</h4>
+            <input name="telNo" type="tel" placeholder="-----------"minlength="11" maxlength="11" required>
             
             <h4 class="comment">Why do you want to do a T-Level Placement?</h4>
             <textarea class="textInput" name="comment" rows="3" maxlength="3000" required>
@@ -148,30 +151,39 @@
     <script>
         function validate() {
 
-            if( document.enquire.name.value == "" )
+            if( document.apply.name.value == "" )
             {
                 alert("Please provide your name.");
-                document.enquire.name.focus() ;
+                document.apply.name.focus() ;
                 return false;
             }
 
-            if( document.enquire.email.value == "" )
+            if( document.apply.email.value == "" )
             {
                 alert("Please provide a valid email.");
-                document.enquire.email.focus() ;
+                document.apply.email.focus() ;
                 return false;
             }
 
-            var emailID = document.enquire.email.value;
+            var emailID = document.apply.email.value;
             atpos = emailID.indexOf("@");
             dotpos = emailID.lastIndexOf(".");
 
-            if (atpos < 1 || (dotpos - atpos < 2)) {
+            if (atpos < 1 || (dotpos - atpos < 2))
+            {
                 alert("Please provide a valid email in the format: name@example.com")
-                document.enquire.email.focus() ;
+                document.apply.email.focus() ;
                 return false;
-                }
             }
+            var phone = document.apply.telNo.value;
+
+            if (phone !== "" && !/^\d{11}$/.test(phone))
+            {
+                alert("Invalid phone number. Enter a valid 11-digit number.");
+                document.apply.phone.focus();
+                return false;
+            }
+        }
     </script>
 
     <footer class="footer">
