@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jess - T-Connect Website</title>
 
@@ -83,6 +80,14 @@
     h3 {
       color: #000;
     }
+    .flex-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    p {
+      margin: 1%;
+    }
     </style>
 
   <body>
@@ -97,7 +102,7 @@
             <span class="icon-bar"></span>
           </button>
           <ul class="nav navbar-nav navbar-left">
-            <img src="Picture2.png" class="img-fluid" alt="T-Connect Logo" width="80" height="70"></ul>
+            <img src="Picture2.png" style="max-width: 100%; height: auto;" alt="T-Connect Logo" width="80" height="70"></ul>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -105,7 +110,7 @@
               <li class="nav-link active" aria-current="page"><a href="saved.html">ABOUT</a></li>
               <li class="nav-link"><a href="faq.html">FAQ</a></li>
               <li class="nav-link"><a href="enquire.html">ENQUIRE</a></li>
-              <li class="nav-link"><a href="#">FIND A PLACEMENT</a></li>
+              <li class="nav-link"><a href="#">APPLY</a></li>
           </ul>
         </div>
       </div>
@@ -114,62 +119,41 @@
     <main>
 
       <!-- Hero section  -->
-      <section class="hero">
+      <section class="hero" style="max-width: 100%; height: auto;">
         <div class="container">
         </div>
       </section>
 
-      <fieldset>
         <div class="container">
-        <h1 class="text-center">About T-Connect</h1>
+          <div class="row text-center">
+            <h1 class="text-center">About T-Connect</h1>
+          </div><br />
+        </div>
+
         <div class="row text-center">
               <div class="col-md-6">
-                  <img class="" src="tempimg.jpg" width="250px">
-              </div>
-              <div class="col-md-6">
-
+                  <img src="image.jpg" style="max-width: 100%; height: auto;" width="550px">
                   <h3 class="text-center">What is the T-Connect Programme?</h3>
                       <p>T-Connect is a digital T-Level pilot created by Manchester Digital. The T-Connect Programme offers T-Level students the opportunity to attend a 45-day industry placement.
                             Industry placements are a key part of T Levels. 
-                            These placements give students the opportunity to develop real skills in a real workplace.</p><br />
-              </div>
-            </div>
-          </div>
-        </fieldset>
-
-        <div class="container">
-        <div class="row text-center">
-              <div class="col-md-6">
-                  <img class="" src="tempimg.jpg" width="250px">
-              </div>
-              <div class="col-md-6">
-
+                            These placements give students the opportunity to develop real skills in a real workplace.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="what.jpg" style="max-width: 100%; height: auto;" width="550px">
                   <h3 class="text-center">What are T-Levels?</h3>
                       <p>T-Levels are 2-year courses which are taken after GCSEs and are equivalent in size to 3 A-Levels.
                         T-Levels have been developed in collaboration with employers and education providers so that the content meets the needs
                         of industry and prepares students for entry into skilled employment, an apprenticeship or related technical study
                         through further or higher education.</p><br />
-              </div>
-            </div>
+                  </div>
           </div>
 
-          <div class="container">
           <div class="row text-center">
-                <div class="col-md-6">
-                    <img class="" src="tempimg.jpg" width="250px">
-                </div>
-                <div class="col-md-6">
+            <h1>Student Testimonies</h1>
+            <p>Read some of our previous placement student's testimonies here:</p>
+          </div>
 
-                    <h3 class="text-center">What is the T-Connect Programme?</h3>
-                        <p>T-Connect is a digital T-Level pilot created by Manchester Digital. The T-Connect Programme offers T-Level students the opportunity to attend a 45-day industry placement.
-                              Industry placements are a key part of T Levels. 
-                              These placements give students the opportunity to develop real skills in a real workplace.</p><br />
-                </div>
-              </div>
-            </div>
-    </main>
-
-    <div class="card" style="border: 2px solid black; text-align: center;">
+    <div class="card" style="border: 2px solid #d03a8f; text-align: center; margin: 1%;">
       <div class="card-header">
         Great Placement!
       </div>
@@ -186,7 +170,7 @@
     </div>
     <br />
 
-    <div class="card" style="border: 2px solid black; text-align: center;">
+    <div class="card" style="border: 2px solid #d03a8f; text-align: center; margin: 1%;">
       <div class="card-header">
         Great Placement!
       </div>
@@ -203,7 +187,7 @@
     </div>
     <br />
 
-    <div class="card" style="border: 2px solid black; text-align: center;">
+    <div class="card" style="border: 2px solid #d03a8f; text-align: center; margin: 1%;">
       <div class="card-header">
         Great Placement!
       </div>
@@ -219,6 +203,8 @@
       </div>
     </div>
     <br />
+
+  </main>
 
     <footer class="footer">
       <div class="container">
