@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.png">
 
-    <title>Jess - T-Connect Website</title>
+    <title>Manchester Digital Application Form</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -35,6 +35,7 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        color:#000;
     }
     section.hero {
       background-image: url(MacBook\ Pro\ 14_\ -\ 8.png);
@@ -43,23 +44,6 @@
       background-color: #E7E7D8;
       background-size:cover;
       display: flex;
-    }
-    .card-group .card .card-body h3 {
-      color: #000000;
-    }
-    .btn-primary {
-      color: #fff;
-      background-color: #6862af;
-      border-color: #272443;
-    }
-
-    .btn:hover {
-      color:#fff;
-      background-color: #37326a;
-      border-color: #272443;
-    }
-    .btn:focus {
-      background-color: #3a3844;
     }
     section>.container h2 {
       font-weight: bold;
@@ -82,64 +66,29 @@
       color: #fff;
     }
     .form-container {
-        text-align: center;
+        border: 2px solid #000;
+        padding: 2%;
     }
     a {
         color: #000000;
-    }
-    .accordion {
-        text-align: left;
-        padding-top: 0.2%;
-        padding-bottom: 0.2%;
-    }
-    .accordion-button {
-        color: #000;
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 8px 22px;
-        position: relative;
-        transition: ease .5s;
-    }
-    .accordion-button::after {
-        font-family: "Font Awesome 5 Free";
-        content: '\f078';
-        font-weight: bold;
-    }
-    input:checked + .accordion-button::after {
-        content: '\f077';
-    }
-    .accordion-button::after {
-        font-family: "Font Awesome 5 Free";
-        content: '\f078';
-        font-weight: bold;
-        font-size: 22px;
-        position: absolute;
-        right: 10px;
-        top: 6px;
-    }
-    input + .accordion-button + .accordion {
-        display: none;
-    }
-
-    input:checked + .accordion-button + .accordion {
-        display: block;
-    }
-    input {
-        display: none;
-    }
-    .accordion-button:not(.collapsed) {
-        color: #5abe9d;
-        box-shadow: none;
-    }
-    .accordion-item {
-      background-color: #ffffff;
     }
     p {
       color:#000000;
       margin-bottom: 0;
       margin-left: 3%;
       margin-right: 3%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    input:focus, textarea:focus {
+        border: 5px solid #4d444e;
     }
     </style>
 
@@ -148,47 +97,85 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <ul class="nav navbar-nav navbar-left">
             <a href="index.html">
             <img src="Picture2.png" class="img-fluid" alt="T-Connect Logo" width="80" height="70"></ul></a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-              <li class="nav-link"><a href="index.html">HOME PAGE</a></li>
-              <li class="nav-link"><a href="saved.html">ABOUT</a></li>
-              <li class="nav-link"><a href="faq.html">FAQ</a></li>
-              <li class="nav-link"><a href="apply.html">ENQUIRE</a></li>
-              <li class="nav-link active" aria-current="page"><a href="application.html">APPLY</a></li>
-          </ul>
-        </div>
       </div>
     </nav>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-end">
-            <div class="social-icons">
-              <a href="https://www.facebook.com/ManchesterDigital/" target="_blank" aria-label="Facebook"><i class="mdi mdi-facebook"></i></a>
-              <a href="https://x.com/McrDig" target="_blank" aria-label="Twitter"><i class="mdi mdi-twitter"></i></a>
-              <a href="https://www.instagram.com/manchesterdigital/" target="_blank" aria-label="Instagram"><i class="mdi mdi-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/manchester-digital/" target="_blank" aria-label="LinkedIn"><i class="mdi mdi-linkedin"></i></a>
-            </div>
-          </div>
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-           <a href="https://www.manchesterdigital.com/" target="_blank">
-              <img src="mdlogo.png" class="img-fluid" width="130" height="40"/></a>
-            <img src="tlvl.png" class="img-fluid" width="110" height="40">
-          </div>
+    <main>
+        <div class="form-container" style="text-align: center; border: none;">
+            <h1>Application Form</h1>
+            <h5>Please ensure all details are filled out correctly, as we will use these details to contact you.</h5>
         </div>
-      </div>
-    </footer>
+
+        <div class="form-container" style="margin: 1%;">
+            <form action="#" name = "enquire" onsubmit = "return(validate());">
+                <h3>Personal Information</h3><br />
+                    <h4 class="name">First Name:</h4>
+                    <input type="textInput" type="text" name="name1" style="display: table-cell;" required>
+
+                    <h4 class="name">Surname:</h4>
+                    <input type="textInput" type="text" name="name2" style="display: table-cell;" required>
+
+                    <h4 class="email">E-mail Address:</h4>
+                    <input class="textInput" type="email" name="email" required>
+
+                    <h4 class="name">Phone Number:</h4>
+                    <input type="textInput" type="text" name="phone" style="display: table-cell;" required>
+
+                    <h4 class="name">College/Sixth Form:</h4>
+                    <input type="textInput" type="text" name="name3" style="display: table-cell;" required>
+
+                <h3>About You</h3><br />
+                    <h4 class="comment">Why do you want to do a T-Level Placement?</h4>
+                    <textarea class="textInput" name="comment" rows="3" maxlength="300" required>
+                    </textarea><br />
+                
+                <h3>CV</h3><br />
+                    <h4 class="myfile">Upload your CV here:</h4>
+                    <input type="file" id="myfile" name="myfile" style="border: 5px solid #4d444e;">
+
+                <h3>Confirmation</h3>
+                    <input type = "submit" value = "Submit" /><br />
+            </form>
+        </div>
+        <br />
+        <script>
+                function validate() {
+                    if( document.enquire.name1.value == "" )
+                    {
+                        alert("Please provide your name.");
+                        document.enquire.name.focus() ;
+                        return false;
+                    }
+
+                    if( document.enquire.name2.value == "" )
+                    {
+                        alert("Please provide your name.");
+                        document.enquire.name.focus() ;
+                        return false;
+                    }
+
+                    if( document.enquire.email.value == "" )
+                    {
+                        alert("Please provide a valid email.");
+                        document.enquire.email.focus() ;
+                        return false;
+                    }
+
+                    var emailID = document.enquire.email.value;
+                    atpos = emailID.indexOf("@");
+                    dotpos = emailID.lastIndexOf(".");
+
+                    if (atpos < 1 || (dotpos - atpos < 2)) {
+                        alert("Please provide a valid email in the format: name@example.com")
+                        document.enquire.email.focus() ;
+                        return false;
+                        }
+                    }
+        </script>
+        
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
