@@ -83,6 +83,7 @@
         padding: 12px 20px;
         margin: 8px 0;
         box-sizing: border-box;
+        resize: none;
     }
     input:focus, textarea:focus {
         border: 5px solid #4d444e;
@@ -105,84 +106,106 @@
         </div>
 
         <div class="form-container" style="margin: 1%;">
-            <form action="#" name = "enquire" onsubmit = "return(validate());">
+            <!-- <form action="#" name = "enquire" onsubmit = "return(validate());"> -->
                 <h3>Personal Information</h3><br />
                     <h4 class="name"><span class="form-required">* </span>First Name:</h4>
-                    <input type="textInput" type="text" name="name1" style="display: table-cell;">
+                    <input id="name1" style="display: table-cell;">
+                    <p id="demo1" style="color: #ff0000;"></p>
 
                     <h4 class="name"><span class="form-required">* </span>Surname:</h4>
-                    <input type="textInput" type="text" name="name2" style="display: table-cell;">
+                    <input id="name2" style="display: table-cell;">
+                    <p id="demo2" style="color: #ff0000;"></p>
 
                     <h4 class="email"><span class="form-required">* </span>E-mail Address:</h4>
-                    <input class="textInput" type="email" name="email">
+                    <input id="email" style="display: table-cell;">
+                    <p id="demo3" style="color: #ff0000;"></p>
 
                     <h4 class="name"><span class="form-required">* </span>Phone Number:</h4>
-                    <input type="textInput" type="text" name="phone" style="display: table-cell;">
+                    <input id="phone" style="display: table-cell;">
+                    <p id="demo4" style="color: #ff0000;"></p>
 
                     <h4 class="name"><span class="form-required">* </span>College/Sixth Form:</h4>
-                    <input type="textInput" type="text" name="name3" style="display: table-cell;">
+                    <input id="name3" style="display: table-cell;">
+                    <p id="demo5" style="color: #ff0000;"></p>
 
                 <h3>About You</h3><br />
                     <h4 class="comment"><span class="form-required">* </span>Why do you want to do a T-Level Placement?</h4>
-                    <textarea class="textInput" name="comment" rows="3" maxlength="300">
-                    </textarea><br />
+                    <textarea id="comment" rows="10" maxlength="300"></textarea><br />
+                    <p id="demo6" style="color: #ff0000;"></p>
                 
                 <h3>CV</h3><br />
                     <h4 class="myfile"><span class="form-required">* </span>Upload your CV here:</h4>
-                    <input type="file" id="myfile" name="myfile" style="border: 5px solid #4d444e;">
+                    <input type="file" id="myfile" style="border: 5px solid #4d444e;">
+                    <p id="demo7" style="color: #ff0000;"></p>
 
                 <h3>Confirmation</h3>
-                    <input type = "submit" value = "Submit" /><br />
-            </form>
+                    <button type="button" onclick="validate()">Submit</button>
+            <!-- </form> -->
         </div>
         <br />
+
         <script>
-                function validate() {
-                    if( document.enquire.name1.value == "" )
-                    {
-                        textContent = "Please provide your full name.";
-                        document.enquire.name1.focus() ;
-                        return false;
-                    }
+          function validate() {
+            let firstName = document.getElementById("name1").value;
+            let surname = document.getElementById("name2").value;
+            let emailAd = document.getElementById("email").value;
+            let number = document.getElementById("phone").value;
+            let educationName = document.getElementById("name3").value;
+            let reason = document.getElementById("comment").value;
+            let file = document.getElementById("myfile").value;
 
-                    if( document.enquire.email.value == "" )
-                    {
-                        textContent = "Please provide your email in the format: someone@example.com.";
-                        document.enquire.email.focus() ;
-                        return false;
-                    }
+            document.getElementById("demo1").innerHTML = "";
+            document.getElementById("demo2").innerHTML = "";
+            document.getElementById("demo3").innerHTML = "";
+            document.getElementById("demo4").innerHTML = "";
+            document.getElementById("demo5").innerHTML = "";
+            document.getElementById("demo6").innerHTML = "";
+            document.getElementById("demo7").innerHTML = "";
 
-                    var emailID = document.enquire.email.value;
-                    atpos = emailID.indexOf("@");
-                    dotpos = emailID.lastIndexOf(".");
+            if (firstName === "") {
+              document.getElementById("demo1").innerHTML = "* Please fill in this field";
+            }
 
-                    if (atpos < 1 || (dotpos - atpos < 2)) {
-                        textContent = "Please provide your email in the format: someone@example.com.";
-                        document.enquire.email.focus() ;
-                        return false;
-                    }
+            if (surname === "") {
+              document.getElementById("demo2").innerHTML = "* Please fill in this field";
+            }
 
-                    if( document.enquire.phone.value == "" )
-                    {
-                        textContent = "Please provide your phone number.";
-                        document.enquire.email.focus() ;
-                        return false;
-                    }
+            if (emailAd === "") {
+              document.getElementById("demo3").innerHTML = "* Please fill in this field";
+            }
 
-                    if( document.enquire.name3.value == "" )
-                    {
-                        textContent = "Please provide your name.";
-                        document.enquire.email.focus() ;
-                        return false;
-                    }
+            atpos = emailAd.indexOf("@");
+            dotpos = emailAd.lastIndexOf(".");
 
-                }
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+              document.getElementById("demo3").innerHTML = "* Invalid input";
+            }
+
+            if (number === "") {
+              document.getElementById("demo4").innerHTML = "* Please fill in this field";
+            }
+
+            if (educationName === "") {
+              document.getElementById("demo5").innerHTML = "* Please fill in this field";
+            }
+
+            if (reason === "") {
+              document.getElementById("demo6").innerHTML = "* Please fill in this field";
+            }
+
+            if (file === "") {
+              document.getElementById("demo7").innerHTML = "* Please choose a file";
+            }
+
+            // if (firstName !== "" && surname !== "") {
+            //   alert("Form submitted successfully!");
+            // }
+          }
         </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
     <script src="js/bootstrap.js"></script>
 </body>
 </html>

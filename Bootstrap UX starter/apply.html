@@ -127,56 +127,52 @@
       </section>
 
       <div class="form-container">
-                <form action="#" name = "enquire" onsubmit = "return(validate());">
+        <form action="#" name = "enquire" onsubmit = "return(validate());">
+        <h5>This form is for employers who are interested in hosting T-Level Placements.</h5>
+        <h5>Please ensure all details are filled out correctly, as we will use these details to contact you.</h5><br />
 
-                    <h5>This form is for employers who are interested in hosting T-Level Placements.</h5>
-                    <h5>Please ensure all details are filled out correctly, as we will use these details to contact you.</h5><br />
+          <h4 class="name">Name:</h4>
+          <input class="textInput" type="text" name="name" required>
 
-                    <h4 class="name">Name:</h4>
-                    <input class="textInput" type="text" name="name" required>
-
-                    <h4 class="email">E-mail Address:</h4>
-                    <input class="textInput" type="email" name="email" required>
+          <h4 class="email">E-mail Address:</h4>
+          <input class="textInput" type="email" name="email" required>
                     
-                    <h4 class="comment">Why do you want to host a T-Level Placement?</h4>
-                    <textarea class="textInput" name="comment" rows="3" maxlength="3000" required>
-                    </textarea><br />
+          <h4 class="comment">Why do you want to host a T-Level Placement?</h4>
+          <textarea class="textInput" name="comment" rows="3" maxlength="3000" required>
+          </textarea><br />
 
-                    <input type = "submit" value = "Submit" />
-                </form>
-            </div>
+          <input type = "submit" value = "Submit" />
+        </form>
+      </div>
+      <br />  
+      <script>
+        function validate() {
 
-            <br />
-            
-            <script>
+            if( document.enquire.name.value == "" )
+            {
+                alert("Please provide your name.");
+                document.enquire.name.focus() ;
+                return false;
+            }
 
-                function validate() {
+            if( document.enquire.email.value == "" )
+            {
+                alert("Please provide a valid email.");
+                document.enquire.email.focus() ;
+                return false;
+            }
 
-                    if( document.enquire.name.value == "" )
-                    {
-                        alert("Please provide your name.");
-                        document.enquire.name.focus() ;
-                        return false;
-                    }
+            var emailID = document.enquire.email.value;
+            atpos = emailID.indexOf("@");
+            dotpos = emailID.lastIndexOf(".");
 
-                    if( document.enquire.email.value == "" )
-                    {
-                        alert("Please provide a valid email.");
-                        document.enquire.email.focus() ;
-                        return false;
-                    }
-
-                    var emailID = document.enquire.email.value;
-                    atpos = emailID.indexOf("@");
-                    dotpos = emailID.lastIndexOf(".");
-
-                    if (atpos < 1 || (dotpos - atpos < 2)) {
-                        alert("Please provide a valid email in the format: name@example.com")
-                        document.enquire.email.focus() ;
-                        return false;
-                        }
-                    }
-        </script>
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please provide a valid email in the format: name@example.com")
+                document.enquire.email.focus() ;
+                return false;
+                }
+            }
+      </script>
 
     <footer class="footer">
       <div class="container">
