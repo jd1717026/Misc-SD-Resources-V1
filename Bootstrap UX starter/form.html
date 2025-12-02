@@ -95,8 +95,6 @@
       <div class="container">
         <div class="navbar-header">
           <ul class="nav navbar-nav navbar-left">
-            <a href="index.html">
-            <img src="Picture2.png" class="img-fluid" alt="T-Connect Logo" width="80" height="70"></ul></a>
         </div>
       </div>
     </nav>
@@ -140,10 +138,10 @@
         <br />
         <script>
                 function validate() {
-                    if( document.enquire.name1.value == "" || document.enquire.name2.value == "" )
+                    if( document.enquire.name1.value == "" )
                     {
                         textContent = "Please provide your full name.";
-                        document.enquire.name.focus() ;
+                        document.enquire.name1.focus() ;
                         return false;
                     }
 
