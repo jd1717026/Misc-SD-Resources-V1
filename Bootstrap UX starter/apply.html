@@ -119,60 +119,11 @@
     </nav>
 
     <main>
-
-      <!-- Hero section  -->
-      <section class="hero">
-        <div class="container">
-        </div>
-      </section>
-
-      <div class="form-container">
-        <form action="#" name = "enquire" onsubmit = "return(validate());">
-        <h5>This form is for employers who are interested in hosting T-Level Placements.</h5>
-        <h5>Please ensure all details are filled out correctly, as we will use these details to contact you.</h5><br />
-
-          <h4 class="name">Name:</h4>
-          <input class="textInput" type="text" name="name" required>
-
-          <h4 class="email">E-mail Address:</h4>
-          <input class="textInput" type="email" name="email" required>
-                    
-          <h4 class="comment">Why do you want to host a T-Level Placement?</h4>
-          <textarea class="textInput" name="comment" rows="3" maxlength="3000" required>
-          </textarea><br />
-
-          <input type = "submit" value = "Submit" />
-        </form>
+      <div class="row text-center">
+        <h1>Thank you for your form submission.</h1>
+        <h2>Expect a response through your email in the next few days.</h2>
+        <h4>You can now safely close this window</h4>
       </div>
-      <br />  
-      <script>
-        function validate() {
-
-            if( document.enquire.name.value == "" )
-            {
-                alert("Please provide your name.");
-                document.enquire.name.focus() ;
-                return false;
-            }
-
-            if( document.enquire.email.value == "" )
-            {
-                alert("Please provide a valid email.");
-                document.enquire.email.focus() ;
-                return false;
-            }
-
-            var emailID = document.enquire.email.value;
-            atpos = emailID.indexOf("@");
-            dotpos = emailID.lastIndexOf(".");
-
-            if (atpos < 1 || (dotpos - atpos < 2)) {
-                alert("Please provide a valid email in the format: name@example.com")
-                document.enquire.email.focus() ;
-                return false;
-                }
-        }
-      </script>
 
     <footer class="footer">
       <div class="container">
@@ -188,7 +139,8 @@
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
            <a href="https://www.manchesterdigital.com/" target="_blank">
               <img src="mdlogo.png" class="img-fluid" width="130" height="40"/></a>
-            <img src="tlvl.png" class="img-fluid" width="110" height="40">
+            <a href="https://www.tlevels.gov.uk/" target="_blank">
+              <img src="tlvl.png" class="img-fluid" width="110" height="40"></a>
           </div>
         </div>
       </div>

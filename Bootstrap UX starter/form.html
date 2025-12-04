@@ -140,6 +140,19 @@
                     <p id="demo5" style="color: #ff0000;"></p>
 
                 <h3>About You</h3><br />
+                <script>
+                  $( function() {
+                      $( "input" ).checkboxradio({
+                          icon: false
+                      });
+                  } );
+                </script>
+                    <h4 class="name"><span class="form-required">* </span>Check Test (incomplete)</h4>
+                    <div class="form-container" style="background-color: white;">
+                      <input type="radio" name="radio-1" value="radio-1" style="vertical-align: middle; margin: 0px; width:50%;">YR 1
+                      <input type="radio" name="radio-1" value="radio-2" style="vertical-align: middle; margin: 0px; width:50%;">YR 2
+                    </div>
+
                     <h4 class="comment"><span class="form-required">* </span>Why do you want to do a T-Level Placement?</h4>
                     <textarea id="comment" rows="6" maxlength="300"></textarea><br />
                     <p id="demo6" style="color: #ff0000;"></p>
