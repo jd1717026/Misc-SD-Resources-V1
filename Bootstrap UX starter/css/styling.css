@@ -7,7 +7,7 @@
         margin-top: auto;
     }
     body {
-        background-color: #EFEFEF;
+        /* background-color: #EFEFEF; */
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -22,9 +22,6 @@
     }
     .card-group .card .card-body h3 {
       color: #000000;
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1;
     }
     section>.container h2 {
       font-weight: bold;
