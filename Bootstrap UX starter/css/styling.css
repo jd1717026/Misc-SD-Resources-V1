@@ -7,7 +7,7 @@
         margin-top: auto;
     }
     body {
-        background-color: #E7E7D8;
+        background-color: #EFEFEF;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -53,4 +53,7 @@
     }
     .row {
       margin: 1%;
+    }
+    a, h1, p {
+        color: #000000;
     }
