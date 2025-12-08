@@ -49,11 +49,9 @@
               document.getElementById("demo4").innerHTML = "* Please fill in this field";
             }
 
-            if (Number.isInteger(number)) {
+            if (!parseInt(number)) {
                 document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
                 document.getElementById("demo9").innerHTML = "* Invalid input";
-            } else {
-                document.getElementById("demo9").innerHTML = "test";
             }
 
             if (educationName === "") {
