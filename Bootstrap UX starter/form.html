@@ -102,10 +102,10 @@
 
                 <h3>About You</h3><br />
                     <h4 class="comment"><span class="form-required">* </span>Why do you want to do a T-Level Placement?</h4>
-                    <textarea id="comment" rows="10" maxlength="300"></textarea><br />
+                    <textarea id="comment" rows="5" maxlength="300"></textarea><br />
                     <p id="demo6" style="color: #ff0000;"></p>
 
-                    <h4 class="comment"><span class="form-required">* </span>What interests you about a career in software or tech?</h4>
+                    <!-- <h4 class="comment"><span class="form-required">* </span>What interests you about a career in software or tech?</h4>
                     <textarea id="interest" rows="10" maxlength="300"></textarea><br />
                     <p id="demo10" style="color: #ff0000;"></p>
 
@@ -127,91 +127,19 @@
                       would help you be at your best during this interview, and if successful, placement?
                       (This won't affect your application, and will help us plan appropriately and support you)</h4>
                     <textarea id="comment" rows="10" maxlength="300"></textarea><br />
-                    <p id="demo14" style="color: #ff0000;"></p>
+                    <p id="demo14" style="color: #ff0000;"></p> -->
                 
                 <h3>CV</h3><br />
                     <h4 class="myfile"><span class="form-required">* </span>Upload your CV here:</h4>
                     <input type="file" id="myfile" style="border: 5px solid #4d444e;">
                     <p id="demo7" style="color: #ff0000;"></p>
 
+                    <script src="js/form_validation.js" defer></script>
                     <br /><button type="button" onclick="validate()">Submit Form</button><br />
                     <br /><p id="finalmsg" style="color: #ff0000;"></p>
             <!-- </form> -->
         </div>
         <br />
-
-        <script>
-          function validate() {
-            let firstName = document.getElementById("name1").value;
-            let surname = document.getElementById("name2").value;
-            let emailAd = document.getElementById("email").value;
-            let number = document.getElementById("phone").value;
-            let educationName = document.getElementById("name3").value;
-            let reason = document.getElementById("comment").value;
-            let file = document.getElementById("myfile").value;
-            let testing = document.getElementById("skills").value;
-
-            document.getElementById("finalmsg").innerHTML = "";
-            document.getElementById("demo1").innerHTML = "";
-            document.getElementById("demo2").innerHTML = "";
-            document.getElementById("demo3").innerHTML = "";
-            document.getElementById("demo4").innerHTML = "";
-            document.getElementById("demo5").innerHTML = "";
-            document.getElementById("demo6").innerHTML = "";
-            document.getElementById("demo7").innerHTML = "";
-            document.getElementById("demo8").innerHTML = "";
-            document.getElementById("demo9").innerHTML = "";
-            document.getElementById("demo10").innerHTML = "";
-            document.getElementById("demo11").innerHTML = "";
-            document.getElementById("demo12").innerHTML = "";
-            document.getElementById("demo13").innerHTML = "";
-            document.getElementById("demo14").innerHTML = "";
-            document.getElementById("demo15").innerHTML = "";
-
-            if (firstName === "") {
-              document.getElementById("demo1").innerHTML = "* Please fill in this field";
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-            }
-
-            if (surname === "") {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo2").innerHTML = "* Please fill in this field";
-            }
-
-            if (emailAd === "") {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo3").innerHTML = "* Please fill in this field";
-            }
-
-            atpos = emailAd.indexOf("@");
-            dotpos = emailAd.lastIndexOf(".");
-
-            if (atpos < 1 || (dotpos - atpos < 2)) {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo8").innerHTML = "* Invalid input";
-            }
-
-            if (number === "") {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo4").innerHTML = "* Please fill in this field";
-            }
-
-            if (educationName === "") {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo5").innerHTML = "* Please fill in this field";
-            }
-
-            if (reason === "") {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo6").innerHTML = "* Please fill in this field";
-            }
-
-            if (file === "") {
-              document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-              document.getElementById("demo7").innerHTML = "* Please choose a file";
-            }
-          }
-        </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
