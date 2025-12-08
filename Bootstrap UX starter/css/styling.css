@@ -54,3 +54,6 @@
     a, h1, p {
         color: #000000;
     }
+    .accordion-item {
+      background-color: #e2dcdc;
+    }
