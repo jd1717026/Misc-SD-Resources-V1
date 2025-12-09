@@ -57,30 +57,30 @@
       background-color: #ececec;
     }
 
-.poppins-light, p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
+    .poppins-light, p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
 
-.poppins-regular, h4, h5 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    .poppins-regular, h4, h5 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-.poppins-medium, h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
+    .poppins-medium, h3 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
 
-.poppins-bold, h2, h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
+    .poppins-bold, h2, h1 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
 
-h1, h2, h3, h4, h5, h6, p, a {
-  text-transform: unset;
+    h1, h2, h3, h4, h5, h6, p, a {
+      text-transform: unset;
 }
