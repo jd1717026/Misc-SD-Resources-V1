@@ -58,12 +58,10 @@
         margin: 8px 0;
         box-sizing: border-box;
         resize: none;
+        background-color: #ffffff;
     }
     input:focus, textarea:focus {
         border: 5px solid #4d444e;
-    }
-    label {
-      display: inline-flex;
     }
     </style>
 
@@ -124,28 +122,44 @@
                     <textarea id="achieve" rows="5" maxlength="300"></textarea><br />
                     <p id="demo12" style="color: #ff0000;"></p>
 
+                    <h4 class="comment"><span class="form-required">* </span>Have you done any coding or digital work outside your course?
+                        (This could include personal projects, online courses, hackathons, etc.)</h4>
+
+                      <h4 class="comment">If yes, give us a brief example:</h4>
+                      <textarea id="example" rows="5" maxlength="300"></textarea><br />
+
                     <h4 class="comment"><span class="form-required">* </span>If there's one thing about software development you'd love to learn or try during your placement, what would it be?</h4>
                     <textarea id="try" rows="5" maxlength="300"></textarea><br />
                     <p id="demo13" style="color: #ff0000;"></p>
 
-                <h3>AVAILABILITY</h3>
+                <h3>AVAILABILITY & ELIGIBILITY</h3>
                       <h4 class="comment"><span class="form-required">* </span>Can you commit to the full placement schedule?</h4>
-                      <input type="radio" name="choice" value="A"><label>Yes</label><br />
-                      <input type="radio" name="choice" value="B"><label>No/Not Sure</label><br />
-                      <input type="radio" name="choice" value="C"><label>No - I only require some additional hours</label><br />
 
-                <h3>ACCESSIBILITY & SUPPORT</h3><br />
+                      <h4 class="comment">If not, please explain why:</h4>
+                      <textarea id="example" rows="5" maxlength="300"></textarea><br />
+
+                      <h4 class="comment"><span class="form-required">* </span>Tell us which best describes you:</h4>
+
+                <br /><h3>ACCESSIBILITY & SUPPORT</h3><br />
                     <h4 class="comment">Do you have any accessibility, sensory, or other support needs that
                       would help you be at your best during this interview, and if successful, placement?
                       (This won't affect your application, and will help us plan appropriately and support you).<br />
                     You may leave this field blank if you don't have any additional needs.</h4>
                     <textarea id="support" rows="5" maxlength="1000"></textarea><br />
-                    <p id="demo14" style="color: #ff0000;"></p>
                 
                 <h3>CV</h3><br />
                     <h4 class="myfile"><span class="form-required">* </span>Upload your CV here:</h4>
                     <input type="file" id="myfile" accept="application/pdf, .docx" style="border: 5px solid #4d444e;">
                     <p id="demo7" style="color: #ff0000;"></p>
+                
+                <h3>CONFIRMATION</h3><br />
+                  <h4 class="#"><span class="form-required">* </span>Manchester Digital may share the information you have provided with other employer partners and funding bodies supporting the T Connect Pilot.
+                  Do you give your consent for us to do so?</h4>
+
+                  <h4 class="#"><span class="form-required">* </span>I confirm the following is true (if not, unfortunately you are not eligible to apply for this placement).</h4>
+
+                  <h4 class="#"><span class="form-required">* </span>If shortlisted, we'll contact you with interview details. Please tick the following boxes to confirm awareness before submitting your application.</h4>
+
 
                     <script src="js/form_validation.js" defer></script>
                     <br /><button type="button" onclick="validate()">Submit Form</button><br />
