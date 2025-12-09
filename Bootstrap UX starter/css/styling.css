@@ -7,7 +7,6 @@
         margin-top: auto;
     }
     body {
-        /* background-color: #EFEFEF; */
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -57,3 +56,21 @@
     .accordion-item {
       background-color: #ececec;
     }
+
+.poppins-light, p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-medium, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-bold, h2, h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
