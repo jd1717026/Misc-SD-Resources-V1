@@ -12,6 +12,7 @@ function validate() {
   let test = document.getElementById("try").value;
 
   document.getElementById("finalmsg").innerHTML = "";
+  document.getElementById("testing").innerHTML = "";
 
   document.getElementById("demo1").innerHTML = "";
   document.getElementById("demo2").innerHTML = "";
@@ -90,7 +91,10 @@ function validate() {
     document.getElementById("demo13").innerHTML = "* Please fill in this field";
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
-  else {
-      
+
+  if (document.getElementById("finalmsg").innerHTML === "") {
+    document.getElementById("testing").innerHTML = "yes";
+  } else {
+    document.getElementById("testing").innerHTML = "";
   }
 }
