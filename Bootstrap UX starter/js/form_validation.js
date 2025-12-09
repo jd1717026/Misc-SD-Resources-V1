@@ -8,6 +8,8 @@ function validate() {
   let file = document.getElementById("myfile").value;
   let comment = document.getElementById("interest").value;
   let strengths = document.getElementById("skills").value;
+  let learning = document.getElementById("achieve").value;
+  let test = document.getElementById("try").value;
 
   document.getElementById("finalmsg").innerHTML = "";
 
@@ -22,6 +24,8 @@ function validate() {
   document.getElementById("demo9").innerHTML = "";
   document.getElementById("demo10").innerHTML = "";
   document.getElementById("demo11").innerHTML = "";
+  document.getElementById("demo12").innerHTML = "";
+  document.getElementById("demo13").innerHTML = "";
 
   if (firstName === "") {
     document.getElementById("demo1").innerHTML = "* Please fill in this field";
@@ -76,6 +80,14 @@ function validate() {
   }
   if (strengths === "") {
     document.getElementById("demo11").innerHTML = "* Please fill in this field";
+    document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+  }
+  if (learning === "") {
+    document.getElementById("demo12").innerHTML = "* Please fill in this field";
+    document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+  }
+  if (test === "") {
+    document.getElementById("demo13").innerHTML = "* Please fill in this field";
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
   else {
