@@ -157,7 +157,6 @@ function validate() {
     document.getElementById("demo17").innerHTML = "* Please select an option";
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
-
   if (document.getElementById("finalmsg").innerHTML === "") {
     document.getElementById("testing").innerHTML = "yes";
   } else {
