@@ -69,7 +69,7 @@
       font-style: normal;
     }
 
-    .poppins-medium, h3 {
+    .poppins-medium, h3, .container {
       font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-style: normal;
