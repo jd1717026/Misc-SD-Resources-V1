@@ -62,14 +62,35 @@ function validate() {
   document.getElementById("demo17").innerHTML = "";
   document.getElementById("demo18").innerHTML = "";
 
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = document.querySelectorAll('input[type="checkbox" id="test1"]');
   let checked = false;
 
   checkboxes.forEach(checkbox => {
     if (checkbox.checked) {
         checked = true;
+        console.log("test 1 true")
     }
   });
+  console.log(checked);
+
+  const checkboxes2 = document.querySelectorAll('input[type="checkbox" id="test2"]');
+  let checked2 = false;
+
+  checkboxes2.forEach(checkbox => {
+    if (checkbox.checked) {
+        checked2 = true;
+        console.log("test 1 true")
+    }
+  });
+
+  // const inputs = document.querySelectorAll('input[type="radio"]');
+  // let check = false;
+
+  // inputs.forEach(radio => {
+  //   if (radio.checked) {
+  //       check = true;
+  //   }
+  // });
 
   if (firstName === "") {
     document.getElementById("demo1").innerHTML = "* Please fill in this field";
