@@ -71,16 +71,15 @@ function validate() {
         console.log("test 1 true")
     }
   });
-  console.log(checked);
 
-  // const inputs = document.querySelectorAll('input[type="radio"]');
-  // let check = false;
+  const inputs = document.querySelectorAll('input[type="radio"]');
+  let check = false;
 
-  // inputs.forEach(radio => {
-  //   if (radio.checked) {
-  //       check = true;
-  //   }
-  // });
+  inputs.forEach(radio => {
+    if (radio.checked) {
+        check = true;
+    }
+  });
 
   if (firstName === "") {
     document.getElementById("demo1").innerHTML = "* Please fill in this field";
@@ -151,7 +150,11 @@ function validate() {
     document.getElementById("demo15").innerHTML = "* Please select an option";
     document.getElementById("demo16").innerHTML = "* Please select an option";
     document.getElementById("demo17").innerHTML = "* Please select an option";
-    document.getElementById("demo18").innerHTML = "* Please select an option";
+    document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+  }
+
+  if (!check) {
+    document.getElementById("demo18").innerHTML = "* Please check this box";
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
 
