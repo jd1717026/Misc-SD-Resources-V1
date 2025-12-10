@@ -179,17 +179,20 @@
                     <h4 class="comment"><span class="form-required">* </span>Have you done any coding or digital work outside your course?
                         (This could include personal projects, online courses, hackathons, etc.)</h4><br />
 
-                      <label class="container">Yes
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">No
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label><br />
+                      <div class="checkbox-group">
+                        <label class="container">Yes
+                          <input type="radio" name="radio" id="radio1" onclick="openTextBox()">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">No
+                          <input type="radio" name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <h4 class="comment" id="box3" style="display: none;">If yes, give us a brief example:</h4>
+                      <textarea id="box4" rows="5" maxlength="300" style="display: none;"></textarea><br />
 
-                      <h4 class="comment">If yes, give us a brief example:</h4>
-                      <textarea id="example" rows="5" maxlength="300"></textarea><br />
+                      <p id="demo14" style="color: #ff0000;"></p>
 
                     <h4 class="comment"><span class="form-required">* </span>If there's one thing about software development you'd love to learn or try during your placement, what would it be?</h4>
                     <textarea id="try" rows="5" maxlength="300"></textarea><br />
@@ -207,67 +210,76 @@
 
                       <h4 class="comment"><span class="form-required">* </span>Can you commit to the full placement schedule?</h4><br />
 
-                      <label class="container">Yes
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">No / Not Sure
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label><br />
+                      <div class="checkbox-group">
+                        <label class="container">Yes
+                          <input type="radio" name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">No / Not Sure
+                          <input type="radio" name="radio" id="opt1" onclick="openTextBox2()">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <h4 class="comment" id="box1" style="display: none;">If not, please explain why:</h4>
+                      <textarea id="box2" rows="5" maxlength="300" style="display: none;"></textarea><br />
 
-                      <h4 class="comment">If not, please explain why:</h4>
-                      <textarea id="example" rows="5" maxlength="300"></textarea><br />
+                      <p id="demo15" style="color: #ff0000;"></p>
 
                       <h4 class="comment"><span class="form-required">* </span>Tell us which best describes you:</h4><br />
 
-                      <label class="container">Year 1 T-Level Student on the Digital Software Development course that wants to secure a full industry placement
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">Year 2 T-Level Student on the Digital Software Development course that wants to secure additional placement hours
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container">Other
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                      </label>
+                      <div class="checkbox-group">
+                        <label class="container">Year 1 T-Level Student on the Digital Software Development course that wants to secure a full industry placement
+                          <input type="radio" name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Year 2 T-Level Student on the Digital Software Development course that wants to secure additional placement hours
+                          <input type="radio" name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Other
+                          <input type="radio" name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <p id="demo16" style="color: #ff0000;"></p>
 
-                <br /><h3>ACCESSIBILITY & SUPPORT</h3><br />
+                <br /><h3>ACCESSIBILITY & SUPPORT</h3>
                     <h4 class="comment">Do you have any accessibility, sensory, or other support needs that
                       would help you be at your best during this interview, and if successful, placement?<br /> <br />
                       This won't affect your application, and will help us plan appropriately and support you.<br /> <br />
                     You may leave this field blank if you don't have any additional needs.</h4>
                     <textarea id="support" rows="5" maxlength="1000"></textarea><br />
                 
-                <h3>CV</h3><br />
+                <h3>CV</h3>
                     <h4 class="myfile"><span class="form-required">* </span>Upload your CV here:</h4>
                     <input type="file" id="myfile" accept="application/pdf, .docx" style="border: 5px solid #4d444e;">
                     <p id="demo7" style="color: #ff0000;"></p>
                 
-                <h3>CONFIRMATION</h3><br />
+                <br /><h3>CONFIRMATION</h3>
                   <h4 class="#"><span class="form-required">* </span>Manchester Digital may share the information you have provided with other employer partners and funding bodies supporting the T Connect Pilot.
                   Do you give your consent for us to do so?</h4><br />
 
-                  <label class="container">Yes
-                    <input type="radio" name="radio">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container">No (If not, we may not be able to process your placement application)
-                    <input type="radio" name="radio">
-                    <span class="checkmark"></span>
-                  </label><br />
+                  <div class="checkbox-group">
+                    <label class="container">Yes
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">No (If not, we may not be able to process your placement application)
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <p id="demo17" style="color: #ff0000;"></p>
 
-
-                  <h4 class="#"><span class="form-required">* </span>I confirm the following is true (if not, unfortunately you are not eligible to apply for this placement).</h4>
+                  <br /><h4 class="#"><span class="form-required">* </span>I confirm the following is true (if not, unfortunately you are not eligible to apply for this placement).</h4>
                   <br />
                   <label class="container">I am a T-Level student on the Digital Software Development Course
                     <input type="checkbox">
                     <span class="checkmark"></span>
-                  </label><br />
+                  </label>
+                  <p id="demo18" style="color: #ff0000;"></p>
 
-                  <h4 class="#">If shortlisted, we'll contact you with interview details. Please tick the following boxes to confirm awareness before submitting your application.</h4>
+                  <br /><h4 class="#">If shortlisted, we'll contact you with interview details. Please tick the following boxes to confirm awareness before submitting your application.</h4>
                   <br />
                   <label class="container">I confirm that the information I have provided in the form is accurate
                     <input type="checkbox">

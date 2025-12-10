@@ -1,3 +1,32 @@
+function openTextBox2() {
+  var checkBox = document.getElementById("opt1");
+  var text = document.getElementById("box1");
+  var text2 = document.getElementById("box2");
+
+  if (checkBox.checked == true){
+    text.style.display = "block";
+    text2.style.display = "block";
+  } else {
+    text.style.display = "none";
+    text2.style.display = "none";
+  }
+}
+
+function openTextBox() {
+
+  var checkBox = document.getElementById("radio1");
+  var text3 = document.getElementById("box3");
+  var text4 = document.getElementById("box4");
+
+  if (checkBox.checked == true){
+    text3.style.display = "block";
+    text4.style.display = "block";
+  } else {
+    text3.style.display = "none";
+    text4.style.display = "none";
+  }
+}
+
 function validate() {
   let firstName = document.getElementById("name1").value;
   let surname = document.getElementById("name2").value;
@@ -27,6 +56,20 @@ function validate() {
   document.getElementById("demo11").innerHTML = "";
   document.getElementById("demo12").innerHTML = "";
   document.getElementById("demo13").innerHTML = "";
+  document.getElementById("demo14").innerHTML = "";
+  document.getElementById("demo15").innerHTML = "";
+  document.getElementById("demo16").innerHTML = "";
+  document.getElementById("demo17").innerHTML = "";
+  document.getElementById("demo18").innerHTML = "";
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  let checked = false;
+
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+        checked = true;
+    }
+  });
 
   if (firstName === "") {
     document.getElementById("demo1").innerHTML = "* Please fill in this field";
@@ -89,6 +132,15 @@ function validate() {
   }
   if (test === "") {
     document.getElementById("demo13").innerHTML = "* Please fill in this field";
+    document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+  }
+
+  if (!checked) {
+    document.getElementById("demo14").innerHTML = "* Please select an option";
+    document.getElementById("demo15").innerHTML = "* Please select an option";
+    document.getElementById("demo16").innerHTML = "* Please select an option";
+    document.getElementById("demo17").innerHTML = "* Please select an option";
+    document.getElementById("demo18").innerHTML = "* Please select an option";
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
 
