@@ -14,7 +14,7 @@ function openTextBox2() {
 
 function openTextBox() {
 
-  var checkBox = document.getElementById("radio1");
+  var checkBox = document.getElementById("1");
   var text3 = document.getElementById("box3");
   var text4 = document.getElementById("box4");
 
@@ -62,7 +62,7 @@ function validate() {
   document.getElementById("demo17").innerHTML = "";
   document.getElementById("demo18").innerHTML = "";
 
-  const checkboxes = document.querySelectorAll('input[type="checkbox" id="test1"]');
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   let checked = false;
 
   checkboxes.forEach(checkbox => {
@@ -72,16 +72,6 @@ function validate() {
     }
   });
   console.log(checked);
-
-  const checkboxes2 = document.querySelectorAll('input[type="checkbox" id="test2"]');
-  let checked2 = false;
-
-  checkboxes2.forEach(checkbox => {
-    if (checkbox.checked) {
-        checked2 = true;
-        console.log("test 1 true")
-    }
-  });
 
   // const inputs = document.querySelectorAll('input[type="radio"]');
   // let check = false;
