@@ -61,6 +61,43 @@ function validate() {
   document.getElementById("demo16").innerHTML = "";
   document.getElementById("demo17").innerHTML = "";
   document.getElementById("demo18").innerHTML = "";
+  
+
+  const selectedRadio = document.querySelector('input[name="radio2"]:checked');
+    if (selectedRadio) {
+    console.log(`Selected value: ${selectedRadio.value}`);
+    } else {
+      document.getElementById("demo17").innerHTML = "* Please select an option";
+      document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+      console.log("No option selected.");
+  }
+
+  const selectedRadio2 = document.querySelector('input[name="radio"]:checked');
+    if (selectedRadio2) {
+    console.log(`Selected value: ${selectedRadio2.value}`);
+    } else {
+      document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+      document.getElementById("demo16").innerHTML = "* Please select an option";
+      console.log("No option selected.");
+  }
+
+  const selectedRadio3 = document.querySelector('input[name="radio1"]:checked');
+    if (selectedRadio3) {
+    console.log(`Selected value: ${selectedRadio3.value}`);
+    } else {
+      document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+      document.getElementById("demo15").innerHTML = "* Please select an option";
+      console.log("No option selected.");
+  }
+
+  const selectedRadio4 = document.querySelector('input[name="radio3"]:checked');
+    if (selectedRadio4) {
+    console.log(`Selected value: ${selectedRadio4.value}`);
+    } else {
+      document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+      document.getElementById("demo14").innerHTML = "* Please select an option";
+      console.log("No option selected.");
+  }
 
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   let checked = false;
@@ -72,14 +109,6 @@ function validate() {
     }
   });
 
-  const inputs = document.querySelectorAll('input[type="radio"]');
-  let rad = false;
-
-  inputs.forEach(radio => {
-    if (radio.checked) {
-        rad = true;
-    }
-  });
 
   if (firstName === "") {
     document.getElementById("demo1").innerHTML = "* Please fill in this field";
@@ -150,15 +179,12 @@ function validate() {
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
 
-  if (!rad) {
-    document.getElementById("demo14").innerHTML = "* Please select an option";
-    document.getElementById("demo15").innerHTML = "* Please select an option";
-    document.getElementById("demo16").innerHTML = "* Please select an option";
-    document.getElementById("demo17").innerHTML = "* Please select an option";
-    document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
-  }
+  const form = document.getElementById("myForm");
+
   if (document.getElementById("finalmsg").innerHTML === "") {
     document.getElementById("testing").innerHTML = "yes";
+    form.action = "send_email.php"; // Set form action
+    form.method = "POST"; // Set form method
   } else {
     document.getElementById("testing").innerHTML = "";
   }
