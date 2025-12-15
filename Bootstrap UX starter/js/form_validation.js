@@ -28,9 +28,9 @@ function openTextBox() {
 }
 
 function validate() {
-  let firstName = document.getElementById("name1").value;
+  let name = document.getElementById("name").value;
   let surname = document.getElementById("name2").value;
-  let emailAd = document.getElementById("email").value;
+  let email = document.getElementById("email").value;
   let number = document.getElementById("phone").value;
   let educationName = document.getElementById("name3").value;
   let reason = document.getElementById("comment").value;
@@ -110,7 +110,7 @@ function validate() {
   });
 
 
-  if (firstName === "") {
+  if (name === "") {
     document.getElementById("demo1").innerHTML = "* Please fill in this field";
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
   }
@@ -120,13 +120,13 @@ function validate() {
     document.getElementById("demo2").innerHTML = "* Please fill in this field";
   }
 
-  if (emailAd === "") {
+  if (email === "") {
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
     document.getElementById("demo3").innerHTML = "* Please fill in this field";
   }
 
-  atpos = emailAd.indexOf("@");
-  dotpos = emailAd.lastIndexOf(".");
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
 
   if (atpos < 1 || (dotpos - atpos < 2)) {
     document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";

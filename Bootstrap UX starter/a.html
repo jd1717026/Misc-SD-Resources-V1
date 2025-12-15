@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <form id="myForm" method="POST" action="send_email.php">
+        <h3>PERSONAL INFORMATION</h3><br />
+
+        <h4 class="name"><span class="form-required">* </span>First Name:</h4>
+        <input id="name" name="name" style="display: table-cell;">
+        <p id="demo1" style="color: #ff0000;"></p>
+
+        <h4 class="email"><span class="form-required">* </span>Email:</h4>
+        <input id="email" name="email" style="display: table-cell;">
+        <p id="demo2" style="color: #ff0000;"></p>
+
+        <button type="button" onclick="validate()">Submit Form</button><br />
+        <br /><p id="finalmsg" style="color: #ff0000;"></p>
+    </form>
+
+    <script>
+        function validate() {
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let form = document.getElementById("myForm");
+
+            document.getElementById("demo1").innerHTML = "";
+            document.getElementById("demo2").innerHTML = "";
+            document.getElementById("finalmsg").innerHTML = "";
+
+            if (name === "") {
+                document.getElementById("demo1").innerHTML = "* Please fill in this field";
+            }
+            if (email === "") {
+                document.getElementById("demo2").innerHTML = "* Please fill in this field";
+            }
+
+            if (name === "" || email === "") {
+                document.getElementById("finalmsg").innerHTML = "* There are errors in your form. Please review them before submission.";
+            } else {
+                form.submit(); // Submit the form if validation passes
+            }
+        }
+    </script>
+</body>
+</html>
