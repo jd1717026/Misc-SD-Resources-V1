@@ -183,8 +183,8 @@ function validate() {
 
   if (document.getElementById("finalmsg").innerHTML === "") {
     document.getElementById("testing").innerHTML = "yes";
-    form.action = "send_email.php"; // Set form action
-    form.method = "POST"; // Set form method
+    // form.action = "send_email.php"; // Set form action
+    // form.method = "POST"; // Set form method
   } else {
     document.getElementById("testing").innerHTML = "";
   }

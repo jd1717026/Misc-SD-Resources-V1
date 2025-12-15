@@ -1,24 +1,33 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
-    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
 
-    $recipient = '1527460@stu.tmc.ac.uk';
-    $subject = 'New Message from Contact Form';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: <' . $email . '>' . "\r\n";
+require 'vendor/autoload.php';
 
-    $email_content = "
-        <p><strong>Name:</strong> $name</p>
-        <p><strong>Email:</strong> $email</p>
-    ";
+$mail = new PHPMailer(true);
 
-    if (mail($recipient, $subject, $email_content, $headers)) {
-        echo "Email sent successfully.";
-    } else {
-        echo "Failed to send email.";
-    }
+try {
+    $mail->SMTPDebug = 2;                                       
+    $mail->isSMTP();                                            
+    $mail->Host       = 'smtp.gfg.com;';                    
+    $mail->SMTPAuth   = true;                             
+    $mail->Username   = 'user@gfg.com';                 
+    $mail->Password   = 'password';                        
+    $mail->SMTPSecure = 'tls';                              
+    $mail->Port       = 587;  
+
+    $mail->setFrom('from@gfg.com', 'Name');           
+    $mail->addAddress('1527460@stu.tmc.ac.uk');
+     
+    $mail->isHTML(true);                                  
+    $mail->Subject = 'Subject';
+    $mail->Body    = 'HTML message body in <b>bold</b> ';
+    $mail->AltBody = 'Body in plain text for non-HTML mail clients';
+    $mail->send();
+    echo "Mail has been sent successfully!";
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
 ?>
